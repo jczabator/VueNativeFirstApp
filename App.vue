@@ -1,6 +1,6 @@
 <template>
   <view class="container">
-    <text class="text-color-primary">{{message}}</text>
+    <button v-bind:title="message" v-bind:on-press="handleBtnPress" />
   </view>
 </template>
 
@@ -10,6 +10,11 @@ export default {
     return{
       message: "Hello World"
     };
+  },
+  methods: {
+    handleBtnPress: function(){
+      alert('Btn Press');
+    }
   }
 }
 </script>
